@@ -10,7 +10,7 @@ import java.util.logging.Logger;
 public final class DBConnect {
 
     private final List<Player> players = new ArrayList<>();
-    private final String URL = "jdbc:sqlite:D:\\Programación\\Proyectos\\PruebaJSF\\football_stats.db";
+    private final String URL = "jdbc:sqlite:D:\\Programación\\Proyectos\\FutStatsWeb\\football_stats.db";
 
     static {
         try {
