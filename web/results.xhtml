@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <h:dataTable value="#{playerManager.currentPlayers}" var="player" border="4" style="width:600px" rendered="#{playerManager.currentPlayers.size()>0}">
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputLabel value="Nombre"/>
+                    </f:facet>
+                    <h:outputLabel value="#{player.nombre}" style="color: green;"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputLabel value="Equipo"/>
+                    </f:facet>
+                    <h:outputLabel value="#{player.equipo}" style="color: green;"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputLabel value="Goles"/>
+                    </f:facet>
+                    <h:outputLabel value="#{player.goles}" style="color: green;"/>
+                </h:column>
+            </h:dataTable>
+            <h:commandButton value="Inicio" action="#{playerManager.reset()}"/>
+        </h:form>
+    </h:body>
+</html>
